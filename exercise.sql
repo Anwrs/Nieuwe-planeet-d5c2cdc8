@@ -1,12 +1,11 @@
-ALTER TABLE planeten
-MODIFY diameter BIGINT NOT NULL;
-ALTER TABLE planeten
-MODIFY afstand_tot_zon BIGINT NOT NULL;
-ALTER TABLE planeten
-MODIFY massa BIGINT NOT NULL;
+ALTER TABLE planeten ADD id 
+INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
 
-ALTER TABLE planeten ADD
-( bezoek_datum INT NOT NULL );
+INSERT INTO planeten(naam,diameter,afstand_tot_zon,massa,bezoek_datum,id)
+VALUES
+("Mars", 6794, 227936640, 0.1,NOW(),6);
 
-UPDATE planeten 
-SET bezoek_datum = NOW();
+
+
+
+
